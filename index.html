@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <link rel="stylesheet" type="text/css" href="custom.css" />
+    <title>Tim Berners-Lee | Biography, Education, Internet, Contributions, & Facts | Britannica</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+
+    <!-- NAVBAR -->
     <div class="topnav">
   <a href="#home" class="active">Logo</a>
   <div id="myLinks">
@@ -21,17 +23,74 @@
   </a>
 </div>
 
-<div style="padding-left:16px">
-  <h3>Horizontal Mobile Navbar</h3>
-  <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
-  <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
-  <p><strong>Note that this example should'nt be used if you have a lot of links, as they will "break" the navbar when there's too many (especially on very small screens).</strong></p>
+<!-- BREADCRUMBS  -->
+<ul class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Science</a></li>
+  <li><a href="#">Mathematics</a></li>
+</ul>
+<!-- BADGE -->
+<section name="description">
+<h1>Tim Berners-Lee</h1>
+<h2>British scientifist</h2>
+<article><i>Also known as: Sir Tim Berners-Lee</i>
+  <p>Written by Michael Aaron Dennis</p>
+  <p>Fast-checked by Michael Aaron Dennis</p>
+  <p>Last Updated: Michael Aaron Dennis</p>
+</section>
 </div>
 
-<!-- End smartphone / tablet look -->
+<!-- TABLE OF CONTENT ALIAS TOC -->
+
+<button id="toggleButton"> <i class="fa fa-bars"></i> Table of content</button>
+<div id="tocContainer" class="hidden">
+  <nav class="toc">
+    <h2>Table of Contents</h2>
+    <ul class="toc-list">
+      <li><a href="#section1">Introduction</a></li>
+      <li><a href="#section2">References & Edit History</a></li>
+      <li><a href="#section3">Related Topics</a></li>
+    </ul>
+  </nav>
 </div>
+
+<!-- CARD PICTURE -->
+
+<div class="module">
+
+<div class="card">
+  
+  <picture><img src="/images/British-scientist-Tim-Berners-Lee.webp" alt="Tim Berners-Lee"></picture>
+    <div class="container">
+      <h4><b>Tim Berners-Lee</b></h4>
+    </div>
+  </div>
+  <h3 class="text-center"><a href="#">See all media</a></h3>
+  <hr>
+
+<section id="section1">
+  <h2>Introduction</h2>
+  <p>Content of Section 1</p>
+</section>
+<section id="section2">
+  <h2>References & Edit History</h2>
+  <p>Content of Section 2</p>
+</section>
+<section id="section3">
+  <h2>Related Topics</h2>
+  <p>Content of Section 3</p>
+</section>
+</div>
+</div>
+<!-- GOOGLE ALOUD PLAYER
+<amp-google-read-aloud-player
+    data-api-key="<YOUR_API_KEY>" where i get the api key? google cloud need payment 
+    data-url="https://www.blog.google/products/assistant/easier-access-web-pages-let-assistant-read-it-aloud/">
+</amp-google-read-aloud-player> -->
+
 
 <script>
+  // MENU NAVBAR
 function myFunction() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
@@ -40,7 +99,23 @@ function myFunction() {
     x.style.display = "block";
   }
 }
+// TABLE CONTENT
+
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleButton = document.getElementById('toggleButton');
+  const tocContainer = document.getElementById('tocContainer');
+  
+  // Toggle the TOC when clicking the button
+  toggleButton.addEventListener('click', function() {
+    tocContainer.classList.toggle('hidden');
+  });
+});
+
+// GOOGLE READ ALOUD PLAYER
 </script>
+<!-- <script async custom-element="amp-google-read-aloud-player" src="https://cdn.ampproject.org/v0/amp-google-read-aloud-player-0.1.js"></script> -->
     <script type="module" src="/main.js"></script>
   </body>
 </html>
+
+
