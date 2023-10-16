@@ -37,7 +37,10 @@
           src="  https://cdn.britannica.com/mendel/eb-logo/MendelNewThistleLogo.png"
           alt="Tim Berners-Lee"
       /></picture>
-      <button class="subscribe button-1">subscribe</button>
+      <button class="subscribe button-1" onclick="myFunction()">
+        subscribe
+      </button>
+      <p style="color: white" id="javascript"></p>
     </section>
 
     <!-- BREADCRUMBS  -->
@@ -206,5 +209,11 @@ ENDESSOUS DE CARTE TEXTE -->
     <!-- // GOOGLE READ ALOUD PLAYER -->
     <!-- <script async custom-element="amp-google-read-aloud-player" src="https://cdn.ampproject.org/v0/amp-google-read-aloud-player-0.1.js"></script> -->
     
+    <script>
+      function myFunction() {
+        document.getElementById("javascript").innerHTML =
+          "Tout c'est bien passé";
+      }
+    </script>
   </body>
 </html>
